@@ -1,0 +1,5 @@
+.ProseMirror {
+    border: none !important; /* Removes the internal border */
+    outline: none; /* Ensures no focus outline appears */
+  }
+  
