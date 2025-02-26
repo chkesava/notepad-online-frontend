@@ -6,7 +6,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/note")
+    fetch("https://notepad-online-backend.onrender.com/api/note")
       .then((res) => res.json())
       .then((data) => setContent(data.content))
       .catch(() => setContent("<p class='text-red-500'>Failed to load content</p>"));

@@ -23,7 +23,7 @@ export default function EditPage() {
     if (!token) return navigate("/admin/login");
     if (!editor) return; // Ensure editor is initialized
 
-    fetch("http://localhost:5000/api/note")
+    fetch("https://notepad-online-backend.onrender.com/api/note")
       .then((res) => res.json())
       .then((data) => {
         editor.commands.setContent(data.content || ""); // Ensure content is valid
@@ -38,7 +38,7 @@ export default function EditPage() {
   // Function to save note
   const saveNote = async () => {
     const content = editor.getHTML();
-    await fetch("http://localhost:5000/api/note", {
+    await fetch("https://notepad-online-backend.onrender.com/api/note", {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
